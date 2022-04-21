@@ -1,0 +1,5 @@
+.image {
+	background-image:url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80); 
+	background-size: cover; 
+	opacity: 0.9;
+}
