@@ -50,8 +50,7 @@ $select_all_posts_query = mysqli_query($connection,$query);
                 
                 <img class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
 
-                the image
-                
+
                 <hr>
                 <p><?php echo $post_content; ?></p>
                 
