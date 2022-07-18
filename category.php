@@ -17,7 +17,7 @@
           
         $post_category_id = $_GET['category'];
         
-         if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'gasheri'){
+         if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'){
 
         $query = "SELECT * FROM posts WHERE post_category_id =$post_category_id";
        
