@@ -1,17 +1,17 @@
 <?php include "includes/db.php"?>
 <?php include "includes/header.php"?>
 
-    <!-- Navigation -->
-<?php include "includes/navigation.php"?>    
-   
-    <!-- Page Content -->
-    <div class="container">
+<!-- Navigation -->
+<?php include "includes/navigation.php"?>
 
-        <div class="row">
+<!-- Page Content -->
+<div class="container">
 
-            <!-- Blog Entries Column -->
-            <div class="col-md-8">
-      <?php
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+            <?php
        $per_page = 05;
     
        if(isset($_GET['page'])){
@@ -69,45 +69,47 @@
         $post_status = $row['post_status'];
         
                 ?>
-            
-                     <!-- First Blog Post -->
-                <h2>
-                    <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title?></a>
-                </h2>
-                <p class="lead">
-by <a href="author_posts.php?author=<?php echo $post_author; ?>&p_id=<?php echo $post_id; ?>"><?php echo $post_author; ?></a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date; ?></p>
-                <hr>
-                
-                <a href="post.php?p_id=<?php echo $post_id; ?>">
+
+            <!-- First Blog Post -->
+            <h2>
+                <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title?></a>
+            </h2>
+            <p class="lead">
+                by <a
+                    href="author_posts.php?author=<?php echo $post_author; ?>&p_id=<?php echo $post_id; ?>"><?php echo $post_author; ?></a>
+            </p>
+            <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date; ?></p>
+            <hr>
+
+            <a href="post.php?p_id=<?php echo $post_id; ?>">
                 <img class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
-                </a>
-                
-                <hr>
-                <p><?php echo $post_content; ?></p>
-                <a class="btn btn-primary" href="post.php?p_id=<?php echo $post_id; ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </a>
 
-                <hr>
-                     
-        
-       <?php } } ?>
+            <hr>
+            <p><?php echo $post_content; ?></p>
+            <a class="btn btn-primary" href="post.php?p_id=<?php echo $post_id; ?>">Read More About me <span
+                    class="glyphicon glyphicon-chevron-right"></span></a>
 
- 
-            </div>
+            <hr>
 
-            <!-- Blog Sidebar Widgets Column -->
-            
-          <?php include "includes/sidebar.php"?>  
+
+            <?php } } ?>
+
 
         </div>
-        <!-- /.row -->
 
-        <hr>
-        
-       <ul class="pager">
-           
-          <?php
+        <!-- Blog Sidebar Widgets Column -->
+
+        <?php include "includes/sidebar.php"?>
+
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <ul class="pager">
+
+        <?php
     
            for($i=1;$i <=$count;$i++){
                
@@ -127,9 +129,9 @@ by <a href="author_posts.php?author=<?php echo $post_author; ?>&p_id=<?php echo 
            }
            
        
-           ?> 
-       
-       </ul>
-        
+           ?>
 
-   <?php include "includes/footer.php"?>    
+    </ul>
+
+
+    <?php include "includes/footer.php"?>
